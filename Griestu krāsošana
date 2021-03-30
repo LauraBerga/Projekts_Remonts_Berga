@@ -1,0 +1,65 @@
+from math import *
+a=float(input("Ievadi griesta garumu metros- "))
+b=float(input("Ievadi griesta platumu metros- "))
+l=int(input("Cik cilveku piedalisies remonta darbiem-"))
+c=int(input("Kadu budzetas tarifu gribat izveleties? 1-lets, 2-videjais, 3-dargs "))
+s=a*b
+p=(a+b)*2
+print('----------------------')
+print('------REZULTATI-------')
+print('----------------------')
+print('Jusu griestu laukums ir-',s,'m2')
+print('Jusu griestu perimetrs ir-',p,'m')
+if c==1:
+    m1=16 #metri kvadratnie na 1 litr kraski
+    n1=1.26 #dengi na 1 litr kraski
+    d1=ceil(s/m1) #mi uznaem skolko litrov kraski nado
+    u1=d1*n1 #cana za krasku
+    print("Jums bus nepieciesams nopirkt",d1,"krasa iepakojumus, kas maksas",round(u1,2),"euro")
+    r1=8.56 #rullis s vedrom
+    k1=1.99 #kistj 10cm
+    w1=1.89 #cena desovogo obicnogo skotcha
+    o1=50 #dlina obicnogo desovogo skotcha
+    t1=ceil(p/o1) #uznaem skolko upakovok skotca ponadobitsja
+    g1=t1*w1 #cena za opredelennoe kolicestvo upakovok
+    print("Jums bus nepieciesams nopirkt",t1,"skotcha iepakojumus")
+    i1=(r1+k1)*l+g1 #cena vseh instrumentov vzavisimosti ot kolicestva ludej
+    print("Instrumentu cena",l,"cilvekiem bus",round(i1,2),"euro")    
+    q1=i1+u1 #summa vsego
+    print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q1,2),"euro")
+elif c==2:
+    m2=13
+    n2=3.60
+    d2=ceil(s/m2)
+    u2=d2*n2 #cana za krasku
+    print("Jums bus nepieciesams nopirkt",d2,"krasa iepakojumus, kas maksas",u2,"euro")
+    r2=17.62 #rullis s 2 nasadkami i vedrom
+    k2=6.47 #2 kisti. menjse i bolse
+    w2=4.69 #skotc
+    o2=50 #dlina skotca
+    t2=ceil(p/o2) #uznaem skolko upakovok skotca ponadobitsja
+    g2=t2*w2 #cena za opredelennoe kolicestvo upakovok
+    print("Jums bus nepieciesams nopirkt",t2,"skotcha iepakojumus")
+    i2=(r2+k2)*l+g2 #cena vseh instrumentov vzavisimosti ot kolicestva ludej  
+    print("Instrumentu cena",l,"cilvekiem bus",round(i2,2),"euro")
+    q2=i2+u2  
+    print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q2,2),"euro")
+elif c==3:
+    m3=9 
+    n3=5.30
+    d3=ceil(s/m3)  
+    u3=d3*n3 #cana za krasku
+    print("Jums bus nepieciesams nopirkt",d3,"krasa iepakojumus, kas maksas",round(u3,2),"euro")
+    r3=8.56 #rullis s vedrom
+    k3=1.99 #kistj 10cm
+    w3=8.80
+    o3=25
+    t3=ceil(p/o3) #uznaem skolko upakovok skotca ponadobitsja
+    g3=t3*w3 #cena za opredelennoe kolicestvo upakovok
+    print("Jums bus nepieciesams nopirkt",t3,"skotcha iepakojumus")
+    i3=(r3+k3)*l+g3 #cena vseh instrumentov vzavisimosti ot kolicestva ludej
+    print("Instrumentu cena",l,"cilvekiem bus",round(i3,2),"euro")
+    q3=i3+u3  
+    print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q3,2),"euro")
+else:
+    print("nav pareizi ievadita izvele")
