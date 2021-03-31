@@ -51,7 +51,7 @@ if j==1:
         N2=(L2+J2+T2+U2)*l #cena za vse instrumenti v zavisimosti ot ludej
         print("Instrumentu cena",l,"cilvekiem bus",round(N2,2),"euro")
         Q2=R2+N2
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q2,2),"euro")        
+        print("Videja cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q2,2),"euro")        
     elif C1==3:
         D3=0.05 #l gruntovki na metr v kvadrate
         G3=3.33 #cena gruntovki na 1 litr
@@ -67,7 +67,7 @@ if j==1:
         N3=(L3+J3+T3+U3+H1)*l #cena za vse instrumenti v zavisimosti ot ludej
         print("Instrumentu cena",l,"cilvekiem bus",round(N3,2),"euro")
         Q3=R3+N3
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q3,2),"euro")         
+        print("Dargaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q3,2),"euro")         
     else:
         print("nav pareizi ievadita izvele")     
 elif j==2:
@@ -121,7 +121,7 @@ elif j==2:
         N5=(L5+J5+T5+U5)*l #cena za vse instrumenti v zavisimosti ot ludej
         print("Instrumentu cena",l,"cilvekiem bus",round(N5,2),"euro")
         Q5=R5+N5
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q5,2),"euro")  
+        print("Videja cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q5,2),"euro")  
     elif c==3:
         D6=0.05 #l gruntovki na metr v kvadrate
         G6=3.33 #cena gruntovki na 1 litr
@@ -137,7 +137,7 @@ elif j==2:
         N6=(L6+J6+T6+U6+H6)*l #cena za vse instrumenti v zavisimosti ot ludej
         print("Instrumentu cena",l,"cilvekiem bus",round(N6,2),"euro")
         Q6=R6+N6
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q6,2),"euro") 
+        print("Dargaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q6,2),"euro") 
     else:
         print("nav pareizi ievadita izvele")    
 else:
