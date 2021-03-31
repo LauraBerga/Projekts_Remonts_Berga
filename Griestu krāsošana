@@ -43,7 +43,7 @@ elif c==2:
     i2=(r2+k2)*l+g2 #cena vseh instrumentov vzavisimosti ot kolicestva ludej  
     print("Instrumentu cena",l,"cilvekiem bus",round(i2,2),"euro")
     q2=i2+u2  
-    print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q2,2),"euro")
+    print("Videja cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q2,2),"euro")
 elif c==3:
     m3=9 
     n3=5.30
@@ -60,6 +60,6 @@ elif c==3:
     i3=(r3+k3)*l+g3 #cena vseh instrumentov vzavisimosti ot kolicestva ludej
     print("Instrumentu cena",l,"cilvekiem bus",round(i3,2),"euro")
     q3=i3+u3  
-    print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q3,2),"euro")
+    print("Dargaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q3,2),"euro")
 else:
     print("nav pareizi ievadita izvele")
