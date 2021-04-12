@@ -1,16 +1,41 @@
 from math import *
-j=int(input("Kadas figuras forma ir jusu istaba? 1-kvadrata forma 2-taisnstura forma -"))
+j = 0
+def navAtlautaIstabasForma(forma): # parbaude, vai forma ir taisnstura, atgriez True vai False
+  if j != 1 and j != 2:
+    return True
+  return False
+def dabutTarifu(): # pieprasa no lietotaja tarifu un atgriez to
+  tarifs = 0
+  while tarifs !=1 and tarifs !=2 and tarifs !=3:
+    tarifs=int(input("Kadu budzetas tarifu gribat izveleties? 1-lets, 2-videjais, 3-dargs - "))
+    if tarifs !=1 and tarifs !=2 and tarifs !=3:
+      print("Ludzu izvelieties 1, 2 vai 3")
+  return tarifs
+def laukums(x, y): # saskaitit laukumu
+  return x*y
+def perimetrs(x, y): # saskaitit perimetru
+  return (x+y)*2
+def cetruSienuPerimetrs(x, y): # saskaitit 4 sienu perimetru prieks kvadrata
+  return perimetrs(x, y)*4
+def cetruSienuLaukums(x, y):# saskaitit 4 sienu laukumu prieks kvadrata
+  return laukums(x, y)*4
+# galvena dala
+while j != 1 and j != 2:
+  j=int(input("Kadas figuras forma ir jusu istaba? 1-kvadrata forma 2-taisnstura forma -"))
+  if navAtlautaIstabasForma(j):
+    print("Ludzu izveleties 1 vai 2")
 l=int(input("Cik cilveku piedalisies remonta darbiem -"))
+# kvadrata forma
 if j==1:
     a=float(input("Ievadi griesta garumu metros- "))
     b=float(input("Ievadi griesta platumu metros- "))
-    s=a*b
-    p=(a+b)*2    
+    s=laukums(a, b)
+    p=perimetrs(a, b)  
     A1=float(input("Ievadi sienas garumu metros - "))
     B1=float(input("Ievadi sienas platumu metros - "))
-    C1=int(input("Kadu budzetas tarifu gribat izveleties? 1-lets, 2-videjais, 3-dargs - "))
-    S1=(A1*B1)*4
-    P1=((A1+B1)*2)*4
+    C1 = dabutTarifu()
+    S1=cetruSienuLaukums(A1, B1)
+    P1=cetruSienuPerimetrs(A1, B1)
     z1=int(input("Ievadiet durvju daudzumu jusu istaba -"))
     x1=float(input("Ievadi durvju garumu metros -"))
     y1=float(input("Ievadi durvju platumu metros -"))
@@ -181,16 +206,17 @@ if j==1:
         print("Veicot so darbu jums bus nepieciesams",round(vr3,2),"stundas")        
     else:
         print("nav pareizi ievadita izvele")
+# taisnstura forma
 elif j==2:
     a1=float(input("Ievadi griesta garumu metros- "))
     b1=float(input("Ievadi griesta platumu metros- "))
-    s1=a1*b1
-    p1=(a1+b1)*2    
+    s1=laukums(a1, b1)
+    p1=perimetrs(a1, b1)   
     A2=float(input("Ievadi sienas garumu metros - "))
     B2=float(input("Ievadi sienas platumu metros - "))
     X2=float(input("Ievadi jusu otras sienas garumu metros - "))
     Y2=float(input("Ievadi jusu otras sienas platumu metros - "))
-    C2=int(input("Kadu budzetas tarifu gribat izveleties? 1-lets, 2-videjais, 3-dargs - "))
+    C2=dabutTarifu()
     S2=((A2*B2)*2)+((X2*Y2)*2)
     P2=(((A2+B2)*2)*2)+(((X2*Y2)*2)*2)
     z2=int(input("Ievadiet durvju daudzumu jusu istaba -"))
@@ -362,4 +388,4 @@ elif j==2:
         vr6=((vs6+vp6+vo6)/l)+ss6+ps6+ko6 #obsee vremja
         print("Veicot so darbu jums bus nepieciesams",round(vr6,2),"stundas")        
     else:
-        print("nav pareizi ievadita izvele") 
+        print("nav pareizi ievadita izvele")      
