@@ -7,7 +7,7 @@ def navAtlautaIstabasForma(forma): # parbaude, vai forma ir taisnstura, atgriez 
 def dabutTarifu(): # pieprasa no lietotaja tarifu un atgriez to
   tarifs = 0
   while tarifs !=1 and tarifs !=2 and tarifs !=3:
-    tarifs=int(input("Kadu budzetas tarifu gribat izveleties? 1-lets, 2-videjais, 3-dargs - "))
+    tarifs=int(input("Kadu budzetas tarifu Jus gribat izveleties? 1-lets, 2-videjais, 3-dargs - "))
     if tarifs !=1 and tarifs !=2 and tarifs !=3:
       print("Ludzu izvelieties 1, 2 vai 3")
   return tarifs
@@ -21,29 +21,29 @@ def cetruSienuLaukums(x, y):# saskaitit 4 sienu laukumu prieks kvadrata
   return laukums(x, y)*4
 # galvena dala
 while j != 1 and j != 2:
-  j=int(input("Kadas figuras forma ir jusu istaba? 1-kvadrata forma 2-taisnstura forma -"))
+  j=int(input("Kadas figuras forma ir Jusu istaba? 1-kvadrata forma 2-taisnstura forma - "))
   if navAtlautaIstabasForma(j):
     print("Ludzu izveleties 1 vai 2")
-l=int(input("Cik cilveku piedalisies remonta darbiem -"))
+l=int(input("Cik cilveku piedalisies remonta darbiem - "))
 # kvadrata forma
 if j==1:
-    a=float(input("Ievadi griesta garumu metros- "))
-    b=float(input("Ievadi griesta platumu metros- "))
+    a=float(input("Ievadiet griesta garumu metros - "))
+    b=float(input("Ievadiet griesta platumu metros - "))
     s=laukums(a, b)
     p=perimetrs(a, b)  
-    A1=float(input("Ievadi sienas garumu metros - "))
-    B1=float(input("Ievadi sienas platumu metros - "))
+    A1=float(input("Ievadiet sienas garumu metros - "))
+    B1=float(input("Ievadiet sienas platumu metros - "))
     C1 = dabutTarifu()
     S1=cetruSienuLaukums(A1, B1)
     P1=cetruSienuPerimetrs(A1, B1)
-    z1=int(input("Ievadiet durvju daudzumu jusu istaba -"))
-    x1=float(input("Ievadi durvju garumu metros -"))
-    y1=float(input("Ievadi durvju platumu metros -"))
+    z1=int(input("Ievadiet durvju daudzumu Jusu istaba - "))
+    x1=float(input("Ievadiet durvju garumu metros - "))
+    y1=float(input("Ievadiet durvju platumu metros - "))
     sxy=x1*y1 #plosadj dveri
     kxy=sxy*z1 #plosadj vseh dverej
-    h1=int(input("Ievadiet logu daudzumu jusu istaba -"))
-    f1=float(input("Ievadi loga garumu metros -"))
-    v1=float(input("Ievadi loga platumu metros -"))
+    h1=int(input("Ievadiet logu daudzumu Jusu istaba - "))
+    f1=float(input("Ievadiet loga garumu metros - "))
+    v1=float(input("Ievadiet loga platumu metros - "))
     sfv=f1*v1 #ploshadj okna
     kfv=sfv*h1 #plosadj vseh okon
     print('----------------------')
@@ -58,7 +58,7 @@ if j==1:
         n1=1.26 #dengi na 1 litr kraski
         d1=ceil(s/m1) #mi uznaem skolko litrov kraski nado
         u1=d1*n1 #cana za krasku
-        print("Jums bus nepieciesams nopirkt",d1,"krasa iepakojumus, kas maksas",round(u1,2),"euro")
+        print("Jums bus nepieciesams nopirkt",d1,"krasa iepakojumus, kas maksas",round(u1,2),"eiro")
         r1=8.56 #rullis s vedrom
         k1=1.99 #kistj 10cm
         w1=1.89 #cena desovogo obicnogo skotcha
@@ -67,30 +67,30 @@ if j==1:
         g1=t1*w1 #cena za opredelennoe kolicestvo upakovok
         print("Jums bus nepieciesams nopirkt",t1,"skotcha iepakojumus")
         i1=(r1+k1)*l+g1 #cena vseh instrumentov vzavisimosti ot kolicestva ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(i1,2),"euro")    
+        print("Instrumentu cena",l,"cilvekiem bus",round(i1,2),"eiro")    
         q1=i1+u1 #summa vsego
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q1,2),"euro")        
+        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus - ",round(q1,2),"eiro")        
         D1=0.05 #l gruntovki na metr v kvadrate
         G1=3.33 #cena gruntovki na 1 litr
         os1=S1-(kxy+kfv) #plosadj sten bez okon i dverej
         M1=ceil(os1*D1) # skolko litrov gruntovki nuzno kupuitj
         R1=M1*G1 #cena za vsu gruntovku
-        print("Jums bus nepieciesams nopirkt",M1,"grunta iepakojumus, kas maksas",round(R1,2),"euro")
+        print("Jums bus nepieciesams nopirkt",M1,"grunta iepakojumus, kas maksas",round(R1,2),"eiro")
         L1=7.49 #dlinnij spatel ctobi razglazivatj stenu
         T1=4.99 #terka
         U1=0.96 #malenjkij spatel
         N1=(L1+T1+U1)*l #cena za vse instrumenti v zavisimosti ot ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(N1,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(N1,2),"eiro")
         Q1=R1+N1
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q1,2),"euro")
+        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus - ",round(Q1,2),"eiro")
         tap1=5.32 #na skolko metrov kvadratnih hvataet ih. odnogo rulona
         W1=7.11 #cena oboev
         klej1=3.69 #cena kleja dlja oboev
         E1=ceil(os1/tap1) #uznali skolko rulonov nada
         cen1=(E1*W1)+klej1 #cena za opredelennoe kolicestvo rulonov
-        print("Jums bus nepieciesams nopirkt",E1,"tapesu iepakojumus, kas maksas",round(cen1,2),"euro")
+        print("Jums bus nepieciesams nopirkt",E1,"tapesu iepakojumus, kas maksas",round(cen1,2),"eiro")
         kop1=cen1+Q1+q1
-        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop1,2),"euro")
+        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop1,2),"eiro")
         sh1=5 #metrov kvadratnih za 1 cas spakluet 1 celovek
         ph1=2.5 #metrov kvadratnih potalka mozet pokrasitj 1 celovek za cas
         oh1=3.3 #metrov kvadratnih oboev mozet pokleitj 1 celovek za cas
@@ -101,13 +101,13 @@ if j==1:
         vp1=s/ph1
         vo1=os1/oh1
         vr1=((vs1+vp1+vo1)/l)+ss1+ps1+ko1 #obsee vremja
-        print("Veicot so darbu jums bus nepieciesams",round(vr1,2),"stundas")
+        print("Veicot so darbu Jums bus nepieciesams",round(vr1,2),"stundas")
     elif C1==2:
         m2=13
         n2=3.60
         d2=ceil(s/m2)
         u2=d2*n2 #cana za krasku
-        print("Jums bus nepieciesams nopirkt",d2,"krasa iepakojumus, kas maksas",u2,"euro")
+        print("Jums bus nepieciesams nopirkt",d2,"krasa iepakojumus, kas maksas",u2,"eiro")
         r2=17.62 #rullis s 2 nasadkami i vedrom
         k2=6.47 #2 kisti. menjse i bolse
         w2=4.69 #skotc
@@ -116,31 +116,31 @@ if j==1:
         g2=t2*w2 #cena za opredelennoe kolicestvo upakovok
         print("Jums bus nepieciesams nopirkt",t2,"skotcha iepakojumus")
         i2=(r2+k2)*l+g2 #cena vseh instrumentov vzavisimosti ot kolicestva ludej  
-        print("Instrumentu cena",l,"cilvekiem bus",round(i2,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(i2,2),"eiro")
         q2=i2+u2  
-        print("Videja cena, tarifa ietvaros, par instrumetiem un krasu bus- ",round(q2,2),"euro")        
+        print("Videja cena, tarifa ietvaros, par instrumetiem un krasu bus - ",round(q2,2),"eiro")        
         D2=0.05 #l gruntovki na metr v kvadrate
         G2=3.33 #cena gruntovki na 1 litr
         os2=S1-(kxy+kfv) #plosadj sten bez okon i dverej
         M2=ceil(os2*D2) # skolko litrov gruntovki nuzno kupuitj
         R2=M2*G2 #cena za vsu gruntovku
-        print("Jums bus nepieciesams nopirkt",M2,"grunta iepakojumus, kas maksas",round(R2,2),"euro")
+        print("Jums bus nepieciesams nopirkt",M2,"grunta iepakojumus, kas maksas",round(R2,2),"eiro")
         L2=8.99 #spatel srednej dlini
         J2=10.99 #dlinnij spatel ctobi razglazivatj stenu
         T2=6.99 #terka
         U2=1.99 #malenjkij spatel
         N2=(L2+J2+T2+U2)*l #cena za vse instrumenti v zavisimosti ot ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(N2,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(N2,2),"eiro")
         Q2=R2+N2
-        print("Videja cena, tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q2,2),"euro")
+        print("Videja cena, tarifa ietvaros, par instrumetiem un gruntu bus - ",round(Q2,2),"eiro")
         tap2=5.32 #na skolko metrov kvadratnih hvataet ih. odnogo rulona
         W2=16.50 #cena oboev
         klej2=3.69 #cena kleja dlja oboev
         E2=ceil(os2/tap2) #uznali skolko rulonov nada
         cen2=(E2*W2)+klej2 #cena za opredelennoe kolicestvo rulonov
-        print("Jums bus nepieciesams nopirkt",E2,"tapesu iepakojumus, kas maksas",round(cen2,2),"euro")   
+        print("Jums bus nepieciesams nopirkt",E2,"tapesu iepakojumus, kas maksas",round(cen2,2),"eiro")   
         kop2=cen2+Q2+q2
-        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop2,2),"euro") 
+        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop2,2),"eiro") 
         sh2=5 #metrov kvadratnih za 1 cas spakluet 1 celovek
         ph2=2.5 #metrov kvadratnih potalka mozet pokrasitj 1 celovek za cas
         oh2=3.3 #metrov kvadratnih oboev mozet pokleitj 1 celovek za cas
@@ -151,13 +151,13 @@ if j==1:
         vp2=s/ph2
         vo2=os2/oh2
         vr2=((vs2+vp2+vo2)/l)+ss2+ps2+ko2 #obsee vremja
-        print("Veicot so darbu jums bus nepieciesams",round(vr2,2),"stundas")        
+        print("Veicot so darbu Jums bus nepieciesams",round(vr2,2),"stundas")        
     elif C1==3:
         m3=9 
         n3=5.30
         d3=ceil(s/m3)  
         u3=d3*n3 #cana za krasku
-        print("Jums bus nepieciesams nopirkt",d3,"krasa iepakojumus, kas maksas",round(u3,2),"euro")
+        print("Jums bus nepieciesams nopirkt",d3,"krasa iepakojumus, kas maksas",round(u3,2),"eiro")
         r3=19.79 #2 rullisa s vedrom
         str3= 2.29 #hudoj rullis
         k3=16.28 #dve kistji
@@ -167,32 +167,32 @@ if j==1:
         g3=t3*w3 #cena za opredelennoe kolicestvo upakovok
         print("Jums bus nepieciesams nopirkt",t3,"skotcha iepakojumus")
         i3=(r3+k3+str3)*l+g3 #cena vseh instrumentov vzavisimosti ot kolicestva ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(i3,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(i3,2),"eiro")
         q3=i3+u3  
-        print("Dargaka cena, tarifa ietvaros, par instrumetiem un krasu bus- ",round(q3,2),"euro")        
+        print("Dargaka cena, tarifa ietvaros, par instrumetiem un krasu bus- ",round(q3,2),"eiro")        
         D3=0.05 #l gruntovki na metr v kvadrate
         G3=3.33 #cena gruntovki na 1 litr
         os3=S1-(kxy+kfv) #plosadj sten bez okon i dverej
         M3=ceil(os3*D3) # skolko litrov gruntovki nuzno kupuitj
         R3=M3*G3 #cena za vsu gruntovku
-        print("Jums bus nepieciesams nopirkt",M3,"grunta iepakojumus, kas maksas",round(R3,2),"euro")
+        print("Jums bus nepieciesams nopirkt",M3,"grunta iepakojumus, kas maksas",round(R3,2),"eiro")
         L3=21.99 #spatel srednej dlini
         J3=18.99 #dlinnij spatel ctobi razglazivatj stenu
         H3=4.99
         T3=18.99 #terka
         U3=8.99 #malenjkij spatel
         N3=(L3+J3+T3+U3+H1)*l #cena za vse instrumenti v zavisimosti ot ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(N3,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(N3,2),"eiro")
         Q3=R3+N3
-        print("Dargaka cena, tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q3,2),"euro") 
+        print("Dargaka cena, tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q3,2),"eiro") 
         tap3=10.65 #na skolko metrov kvadratnih hvataet ih. odnogo rulona
         W3=26.99 #cena oboev
         klej3=3.69 #cena kleja dlja oboev
         E3=ceil(os3/tap3) #uznali skolko rulonov nada
         cen3=(E3*W3)+klej3 #cena za opredelennoe kolicestvo rulonov
-        print("Jums bus nepieciesams nopirkt",E3,"tapesu iepakojumus, kas maksas",round(cen3,2),"euro")     
+        print("Jums bus nepieciesams nopirkt",E3,"tapesu iepakojumus, kas maksas",round(cen3,2),"eiro")     
         kop3=cen3+Q3+q3
-        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop3,2),"euro")  
+        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop3,2),"eiro")  
         sh3=5 #metrov kvadratnih za 1 cas spakluet 1 celovek
         ph3=2.5 #metrov kvadratnih potalka mozet pokrasitj 1 celovek za cas
         oh3=3.3 #metrov kvadratnih oboev mozet pokleitj 1 celovek za cas
@@ -203,30 +203,30 @@ if j==1:
         vp3=s/ph3
         vo3=os3/oh3
         vr3=((vs3+vp3+vo3)/l)+ss3+ps3+ko3 #obsee vremja
-        print("Veicot so darbu jums bus nepieciesams",round(vr3,2),"stundas")        
+        print("Veicot so darbu Jums bus nepieciesams",round(vr3,2),"stundas")        
     else:
-        print("nav pareizi ievadita izvele")
+        print("Nav pareizi ievadita izvele")
 # taisnstura forma
 elif j==2:
-    a1=float(input("Ievadi griesta garumu metros- "))
-    b1=float(input("Ievadi griesta platumu metros- "))
+    a1=float(input("Ievadiet griesta garumu metros - "))
+    b1=float(input("Ievadiet griesta platumu metros - "))
     s1=laukums(a1, b1)
     p1=perimetrs(a1, b1)   
-    A2=float(input("Ievadi sienas garumu metros - "))
-    B2=float(input("Ievadi sienas platumu metros - "))
-    X2=float(input("Ievadi jusu otras sienas garumu metros - "))
-    Y2=float(input("Ievadi jusu otras sienas platumu metros - "))
+    A2=float(input("Ievadiet sienas garumu metros - "))
+    B2=float(input("Ievadiet sienas platumu metros - "))
+    X2=float(input("Ievadiet Jusu otras sienas garumu metros - "))
+    Y2=float(input("Ievadiet Jusu otras sienas platumu metros - "))
     C2=dabutTarifu()
     S2=((A2*B2)*2)+((X2*Y2)*2)
     P2=(((A2+B2)*2)*2)+(((X2*Y2)*2)*2)
-    z2=int(input("Ievadiet durvju daudzumu jusu istaba -"))
-    x2=float(input("Ievadi durvju garumu metros -"))
-    y2=float(input("Ievadi durvju platumu metros -"))
+    z2=int(input("Ievadiet durvju daudzumu Jusu istaba - "))
+    x2=float(input("Ievadiet durvju garumu metros - "))
+    y2=float(input("Ievadiet durvju platumu metros - "))
     sxy2=x2*y2 #plosadj dveri
     kxy2=sxy2*z2 #plosadj vseh dverej
-    h2=int(input("Ievadiet logu daudzumu jusu istaba -"))
-    f2=float(input("Ievadi loga garumu metros -"))
-    v2=float(input("Ievadi loga platumu metros -"))
+    h2=int(input("Ievadiet logu daudzumu Jusu istaba - "))
+    f2=float(input("Ievadiet loga garumu metros - "))
+    v2=float(input("Ievadiet loga platumu metros - "))
     sfv2=f2*v2 #ploshadj okna
     kfv2=sfv2*h2 #plosadj vseh okon
     print('----------------------')
@@ -241,7 +241,7 @@ elif j==2:
         n4=1.26 #dengi na 1 litr kraski
         d4=ceil(s1/m4) #mi uznaem skolko litrov kraski nado
         u4=d4*n4 #cana za krasku
-        print("Jums bus nepieciesams nopirkt",d4,"krasa iepakojumus, kas maksas",round(u4,2),"euro")
+        print("Jums bus nepieciesams nopirkt",d4,"krasa iepakojumus, kas maksas",round(u4,2),"eiro")
         r4=8.56 #rullis s vedrom
         k4=1.99 #kistj 10cm
         w4=1.89 #cena desovogo obicnogo skotcha
@@ -250,30 +250,30 @@ elif j==2:
         g4=t4*w4 #cena za opredelennoe kolicestvo upakovok
         print("Jums bus nepieciesams nopirkt",t4,"skotcha iepakojumus")
         i4=(r4+k4)*l+g4 #cena vseh instrumentov vzavisimosti ot kolicestva ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(i4,2),"euro")    
+        print("Instrumentu cena",l,"cilvekiem bus",round(i4,2),"eiro")    
         q4=i4+u4 #summa vsego
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q4,2),"euro")                
+        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un krasu bus- ",round(q4,2),"eiro")                
         D4=0.05 #l gruntovki na metr v kvadrate
         G4=3.33 #cena gruntovki na 1 litr
         os4=S2-(kxy2+kfv2) #plosadj sten bez okon i dverej
         M4=ceil(os4*D4) # skolko litrov gruntovki nuzno kupuitj
         R4=M4*G4 #cena za vsu gruntovku
-        print("Jums bus nepieciesams nopirkt",M4,"grunta iepakojumus, kas maksas",round(R4,2),"euro")
+        print("Jums bus nepieciesams nopirkt",M4,"grunta iepakojumus, kas maksas",round(R4,2),"eiro")
         L4=7.49 #dlinnij spatel ctobi razglazivatj stenu
         T4=4.99 #terka
         U4=0.96 #malenjkij spatel
         N4=(L4+T4+U4)*l #cena za vse instrumenti v zavisimosti ot ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(N4,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(N4,2),"eiro")
         Q4=R4+N4
-        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q4,2),"euro")
+        print("Visletaka cena, budzeta tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q4,2),"eiro")
         tap4=5.32 #na skolko metrov kvadratnih hvataet ih. odnogo rulona
         W4=7.11 #cena oboev
         klej4=3.69 #cena kleja dlja oboev
         E4=ceil(os4/tap4) #uznali skolko rulonov nada
         cen4=(E4*W4)+klej4 #cena za opredelennoe kolicestvo rulonov
-        print("Jums bus nepieciesams nopirkt",E4,"tapesu iepakojumus, kas maksas",round(cen4,2),"euro") 
+        print("Jums bus nepieciesams nopirkt",E4,"tapesu iepakojumus, kas maksas",round(cen4,2),"eiro") 
         kop4=cen4+Q4+q4
-        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop4,2),"euro")   
+        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop4,2),"eiro")   
         sh4=5 #metrov kvadratnih za 1 cas spakluet 1 celovek
         ph4=2.5 #metrov kvadratnih potalka mozet pokrasitj 1 celovek za cas
         oh4=3.3 #metrov kvadratnih oboev mozet pokleitj 1 celovek za cas
@@ -284,13 +284,13 @@ elif j==2:
         vp4=s1/ph4
         vo4=os4/oh4
         vr4=((vs4+vp4+vo4)/l)+ss4+ps4+ko4 #obsee vremja
-        print("Veicot so darbu jums bus nepieciesams",round(vr4,2),"stundas")        
+        print("Veicot so darbu Jums bus nepieciesams",round(vr4,2),"stundas")        
     elif C2==2:       
         m5=13
         n5=3.60
         d5=ceil(s1/m5)
         u5=d5*n5 #cana za krasku
-        print("Jums bus nepieciesams nopirkt",d5,"krasa iepakojumus, kas maksas",u5,"euro")
+        print("Jums bus nepieciesams nopirkt",d5,"krasa iepakojumus, kas maksas",u5,"eiro")
         r5=17.62 #rullis s 2 nasadkami i vedrom
         k5=6.47 #2 kisti. menjse i bolse
         w5=4.69 #skotc
@@ -299,31 +299,31 @@ elif j==2:
         g5=t5*w5 #cena za opredelennoe kolicestvo upakovok
         print("Jums bus nepieciesams nopirkt",t5,"skotcha iepakojumus")
         i5=(r5+k5)*l+g5 #cena vseh instrumentov vzavisimosti ot kolicestva ludej  
-        print("Instrumentu cena",l,"cilvekiem bus",round(i5,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(i5,2),"eiro")
         q5=i5+u5 
-        print("Videja cena, tarifa ietvaros, par instrumetiem un krasu bus- ",round(q5,2),"euro")        
+        print("Videja cena, tarifa ietvaros, par instrumetiem un krasu bus- ",round(q5,2),"eiro")        
         D5=0.05 #l gruntovki na metr v kvadrate
         G5=3.33 #cena gruntovki na 1 litr
         os5=S2-(kxy2+kfv2) #plosadj sten bez okon i dverej
         M5=ceil(os5*D5) # skolko litrov gruntovki nuzno kupuitj
         R5=M5*G5 #cena za vsu gruntovku
-        print("Jums bus nepieciesams nopirkt",M5,"grunta iepakojumus, kas maksas",round(R5,2),"euro") 
+        print("Jums bus nepieciesams nopirkt",M5,"grunta iepakojumus, kas maksas",round(R5,2),"eiro") 
         L5=8.99 #spatel srednej dlini
         J5=10.99 #dlinnij spatel ctobi razglazivatj stenu
         T5=6.99 #terka
         U5=1.99 #malenjkij spatel
         N5=(L5+J5+T5+U5)*l #cena za vse instrumenti v zavisimosti ot ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(N5,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(N5,2),"eiro")
         Q5=R5+N5
-        print("Videja cena, tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q5,2),"euro")
+        print("Videja cena, tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q5,2),"eiro")
         tap5=5.32 #na skolko metrov kvadratnih hvataet ih. odnogo rulona
         W5=16.50 #cena oboev
         klej5=3.69 #cena kleja dlja oboev
         E5=ceil(os5/tap5) #uznali skolko rulonov nada
         cen5=(E5*W5)+klej5 #cena za opredelennoe kolicestvo rulonov
-        print("Jums bus nepieciesams nopirkt",E5,"tapesu iepakojumus, kas maksas",round(cen5,2),"euro")   
+        print("Jums bus nepieciesams nopirkt",E5,"tapesu iepakojumus, kas maksas",round(cen5,2),"eiro")   
         kop5=cen5+Q5+q5
-        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop5,2),"euro")  
+        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop5,2),"eiro")  
         sh5=5 #metrov kvadratnih za 1 cas spakluet 1 celovek
         ph5=2.5 #metrov kvadratnih potalka mozet pokrasitj 1 celovek za cas
         oh5=3.3 #metrov kvadratnih oboev mozet pokleitj 1 celovek za cas
@@ -334,13 +334,13 @@ elif j==2:
         vp5=s1/ph5
         vo5=os5/oh5
         vr5=((vs5+vp5+vo5)/l)+ss5+ps5+ko5 #obsee vremja
-        print("Veicot so darbu jums bus nepieciesams",round(vr5,2),"stundas")        
+        print("Veicot so darbu Jums bus nepieciesams",round(vr5,2),"stundas")        
     elif C2==3:
         m6=9 
         n6=5.30
         d6=ceil(s1/m6)  
         u6=d6*n6 #cana za krasku
-        print("Jums bus nepieciesams nopirkt",d6,"krasa iepakojumus, kas maksas",round(u6,2),"euro")
+        print("Jums bus nepieciesams nopirkt",d6,"krasa iepakojumus, kas maksas",round(u6,2),"eiro")
         r6=19.79 #rullis s vedrom
         str6=2.29
         k6=16.28  #dve kistji
@@ -350,32 +350,32 @@ elif j==2:
         g6=t6*w6 #cena za opredelennoe kolicestvo upakovok
         print("Jums bus nepieciesams nopirkt",t6,"skotcha iepakojumus")
         i6=(r6+k6+str6)*l+g6 #cena vseh instrumentov vzavisimosti ot kolicestva ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(i6,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(i6,2),"eiro")
         q6=i6+u6  
-        print("Dargaka cena, tarifa ietvaros, par instrumetiem un krasu bus- ",round(q6,2),"euro")         
+        print("Dargaka cena, tarifa ietvaros, par instrumetiem un krasu bus - ",round(q6,2),"eiro")         
         D6=0.05 #l gruntovki na metr v kvadrate
         G6=3.33 #cena gruntovki na 1 litr
         os6=S2-(kxy2+kfv2) #plosadj sten bez okon i dverej
         M6=ceil(os6*D6) # skolko litrov gruntovki nuzno kupuitj
         R6=M6*G6 #cena za vsu gruntovku
-        print("Jums bus nepieciesams nopirkt",M6,"grunta iepakojumus, kas maksas",round(R6,2),"euro")     
+        print("Jums bus nepieciesams nopirkt",M6,"grunta iepakojumus, kas maksas",round(R6,2),"eiro")     
         L6=21.99 #spatel srednej dlini
         J6=18.99 #dlinnij spatel ctobi razglazivatj stenu
         H6=4.99
         T6=6.99 #terka
         U6=8.99 #malenjkij spatel
         N6=(L6+J6+T6+U6+H6)*l #cena za vse instrumenti v zavisimosti ot ludej
-        print("Instrumentu cena",l,"cilvekiem bus",round(N6,2),"euro")
+        print("Instrumentu cena",l,"cilvekiem bus",round(N6,2),"eiro")
         Q6=R6+N6
-        print("Dargaka cena, tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q6,2),"euro") 
+        print("Dargaka cena, tarifa ietvaros, par instrumetiem un gruntu bus- ",round(Q6,2),"eiro") 
         tap6=10.65 #na skolko metrov kvadratnih hvataet ih. odnogo rulona
         W6=26.99 #cena oboev
         klej6=3.69 #cena kleja dlja oboev
         E6=ceil(os6/tap6) #uznali skolko rulonov nada
         cen6=(E6*W6)+klej6 #cena za opredelennoe kolicestvo rulonov
-        print("Jums bus nepieciesams nopirkt",E6,"tapesu iepakojumus, kas maksas",round(cen6,2),"euro")  
+        print("Jums bus nepieciesams nopirkt",E6,"tapesu iepakojumus, kas maksas",round(cen6,2),"eiro")  
         kop6=cen6+Q6+q6
-        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop6,2),"euro")  
+        print("Kopeja summa par remontu noteikta tarifa ietvaros bus - ",round(kop6,2),"eiro")  
         sh6=5 #metrov kvadratnih za 1 cas spakluet 1 celovek
         ph6=2.5 #metrov kvadratnih potalka mozet pokrasitj 1 celovek za cas
         oh6=3.3 #metrov kvadratnih oboev mozet pokleitj 1 celovek za cas
@@ -386,6 +386,6 @@ elif j==2:
         vp6=s1/ph6
         vo6=os6/oh6
         vr6=((vs6+vp6+vo6)/l)+ss6+ps6+ko6 #obsee vremja
-        print("Veicot so darbu jums bus nepieciesams",round(vr6,2),"stundas")        
+        print("Veicot so darbu Jums bus nepieciesams",round(vr6,2),"stundas")        
     else:
-        print("nav pareizi ievadita izvele")      
+        print("Nav pareizi ievadita izvele")    
